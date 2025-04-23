@@ -33,9 +33,9 @@ function testDbRead() {
 }
 
 // add tests
-$tests->add('Database connection', 'testDbConnection');
-$tests->add('table count', 'testDbCount');
-$tests->add('data create', 'testDbCreate');
+$testFramework->add('Database connection', 'testDbConnection');
+$testFramework->add('table count', 'testDbCount');
+$testFramework->add('data create', 'testDbCreate');
 // ...
 
 // run tests
