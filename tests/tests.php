@@ -39,6 +39,6 @@ $testFramework->add('data create', 'testDbCreate');
 // ...
 
 // run tests
-$tests->run();
+$testFramework->run();
 
-echo $tests->getResult();
+echo $testFramework->getResult();
