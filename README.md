@@ -209,7 +209,7 @@ jobs:
         push:
         branches:
         - main
-```
+    ```
 
 4. Что нужно добавить в файл .github/workflows/main.yml для того, чтобы удалять созданные образы после выполнения тестов?
 - ```
@@ -217,4 +217,4 @@ jobs:
         run: docker stop container
       - name: Remove the container
         run: docker rm container
-```
+    ```
