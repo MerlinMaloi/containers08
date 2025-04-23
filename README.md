@@ -205,10 +205,10 @@ jobs:
 
 3. Что нужно изменить в файле .github/workflows/main.yml для того, чтобы тесты запускались при каждом создании запроса на слияние (Pull Request)?
 - ``` 
-on:
-  push:
-    branches:
-      - main
+        on:
+        push:
+        branches:
+        - main
 ```
 
 4. Что нужно добавить в файл .github/workflows/main.yml для того, чтобы удалять созданные образы после выполнения тестов?
