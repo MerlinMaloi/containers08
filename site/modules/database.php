@@ -56,7 +56,7 @@ class Database {
     public function Read($table, $id): mixed{
         try {
             $sql = "SELECT * FROM $table WHERE id = :id LIMIT 1";
-            $statement = $this->connection->prepare($sql);
+            $statement = $this->pdo->prepare($sql);
             $statement->bindValue(":id", $id);
             $statement->execute();
 
@@ -80,7 +80,7 @@ class Database {
     
             $sql = "UPDATE $table SET $setString WHERE id = :id";
     
-            $statement = $this->connection->prepare($sql);
+            $statement = $this->pdo->prepare($sql);
     
             // Привязываем значения
             foreach ($data as $key => $value) {
@@ -97,7 +97,7 @@ class Database {
     public function Delete(string $table, int $id): bool {
         try {
             $sql = "DELETE FROM $table WHERE id = :id";
-            $statement = $this->connection->prepare($sql);
+            $statement = $this->pdo->prepare($sql);
             $statement->bindValue(":id", $id);
 
             return $statement->execute();
@@ -109,7 +109,7 @@ class Database {
     public function Count(string $table): int {
         try {
             $sql = "SELECT COUNT(*) as count FROM $table";
-            $statement = $this->connection->prepare($sql);
+            $statement = $this->pdo->prepare($sql);
             $statement->execute();
 
             $result = $statement->fetch(PDO::FETCH_ASSOC);
