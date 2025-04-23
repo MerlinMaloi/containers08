@@ -35,7 +35,7 @@ class Database {
         }
     }
 
-    public function Create(string $table, array $data): false|int {
+    public function Create(string $table, array $data): int {
         try {
         
             $columns = implode(", ", array_keys($data));
