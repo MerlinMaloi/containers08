@@ -53,7 +53,7 @@ class Database {
         }
     }
 
-    public function Read($table, $id): mixed{
+    public function Read($table, $id){
         try {
             $sql = "SELECT * FROM $table WHERE id = :id LIMIT 1";
             $statement = $this->pdo->prepare($sql);
